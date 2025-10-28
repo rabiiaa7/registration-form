@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-style: oblique;
+      color: rgb(176, 5, 51);
+      background-color: rgb(189, 235, 231);
+      font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+      text-align: center;
+      font-size: large;
+      margin: 0;
+      padding: 30px;
+    }
+
+
+h1 {
+  color: rgb(210, 71, 115);
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 25px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(176, 5, 51, 0.3);
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 6px;
+  margin: 6px 0 12px 0;
+  border: 1px solid rgb(176, 5, 51);
+  border-radius: 5px;
+  font-size: medium;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+}
+
+input[type="submit"], input[type="reset"] {
+  background-color: rgb(210, 71, 115);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: medium;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background-color: rgb(176, 5, 51);
+}
+
+
+  </style>
+</head>
+
+<body>
+  <h1>Student Registration Form</h1>
+
+  <form onsubmit="return validateForm()">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="phone">Phone Number:</label>
+<input type="number" id="phone" name="phone" required>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required>
+
+<label>Gender:</label><br>
+<input type="radio" id="male" name="gender" value="Male" required>
+<label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="Female">
+<label for="female">Female</label><br>
+<input type="radio" id="other" name="gender" value="Other">
+<label for="other">Other</label><br><br>
+
+<label for="department">Department:</label>
+<select id="department" name="department" required>
+  <option value="">---Select Department---</option>
+  <option value="CS">CS</option>
+  <option value="EE">EE</option>
+  <option value="BBA">BBA</option>
+  <option value="ME">ME</option>
+</select>
+
+<label>Skills:</label><br>
+<input type="checkbox" id="html" name="skills" value="HTML">
+<label for="html">HTML</label><br>
+<input type="checkbox" id="css" name="skills" value="CSS">
+<label for="css">CSS</label><br>
+<input type="checkbox" id="js" name="skills" value="JavaScript">
+<label for="js">JavaScript</label><br>
+<input type="checkbox" id="python" name="skills" value="Python">
+<label for="python">Python</label><br><br>
+
+<label for="address">Address:</label>
+<textarea id="address" name="address" rows="4" cols="40"></textarea>
+
+<label for="profile">Upload Profile Picture:</label>
+<input type="file" id="profile" name="profile">
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+
+<label for="confirm">Confirm Password:</label>
+<input type="password" id="confirm" name="confirm" required>
+
+<div style="text-align: center; margin-top: 15px;">
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</div>
+
+
+  </form>
+  
+  <script src="form.js"></script>
+
+</body>
+</html>

@@ -2,7 +2,7 @@ function validateForm() {
   let fullName = document.getElementById("fullname").value.trim();
   let email = document.getElementById("email").value.trim();
   let password = document.getElementById("password").value.trim();
-  let confirmPassword = document.getElementById("confirm").value.trim(); // fixed ID
+  let confirmPassword = document.getElementById("confirm").value.trim(); 
 
   if (fullName === "" || email === "" || password === "" || confirmPassword === "") {
     alert("Please fill out all required fields.");
@@ -20,8 +20,8 @@ function validateForm() {
     return false;
   }
 
-  // If all checks pass
   alert("Registration Successful!");
   return true;
 }
+
 
